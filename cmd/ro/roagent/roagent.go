@@ -93,7 +93,7 @@ func (roagent *ROAgent) RemoveAll() error {
 	return nil
 }
 
-// Removes the first matching key from ROAgent's keyring
+// Remove removes the first matching key from ROAgent's keyring
 func (roagent *ROAgent) Remove(key ssh.PublicKey) error {
 	if roagent.locked {
 		return errLocked
@@ -154,7 +154,7 @@ func (roagent *ROAgent) List() ([]*Key, error) {
 	return list, nil
 }
 
-// Adds a new encrypted key to ROAgent's keyring
+// Add adds a new encrypted key to ROAgent's keyring
 func (roagent *ROAgent) Add(key AddedKey) error {
 	if roagent.locked {
 		return errLocked

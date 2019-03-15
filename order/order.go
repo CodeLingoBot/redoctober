@@ -72,7 +72,7 @@ func GenerateNum() (num string) {
 	return hex.EncodeToString(b)
 }
 
-// NewOrder will create a new map of Orders
+// NewOrderer will create a new map of Orders
 func NewOrderer(hipchatClient hipchat.HipchatClient) (o Orderer) {
 	o.Orders = make(map[string]Order)
 	o.Hipchat = hipchatClient
